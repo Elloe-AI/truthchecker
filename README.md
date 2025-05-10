@@ -103,4 +103,4 @@ Apache 2.0 — open for reuse, forks, and community contribution.
 ## ✉️ Contact
 
 Created by the ImmuneGPT engineering team
-📫 Contact: [oss@yourdomain.com](mailto:oss@yourdomain.com) 
+📫 Contact: [jambo@elloe.ai](mailto:jambo@elloe.ai) 

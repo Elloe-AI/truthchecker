@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "truthchecker"
 version = "0.1.0"
 description = "Hallucination and fact-checking module for LLMs with SHAP support"
-authors = [{name = "ImmuneGPT Team", email = "oss@yourdomain.com"}]
+authors = [{name = "ImmuneGPT Team", email = "jambo@elloe.ai"}]
 readme = "README.md"
 license = {text = "Apache-2.0"}
 dependencies = ["shap", "numpy"]
