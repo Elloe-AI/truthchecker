@@ -118,4 +118,13 @@ By Elloe AI | Contact: [jambo@elloe.ai](mailto:jambo@elloe.ai)
 
 - 🧬 [Immune System for AI](https://github.com/Elloe-AI/immune-system-ai) – Enterprise compliance engine for regulated LLMs
 - 🔍 [AutoRAG](https://github.com/Elloe-AI/autorag) – Retrieval-augmented reasoning with citation enforcement
-- 🔐 [SentinelAI](https://github.com/Elloe-AI/sentinelai) – Real-time SHAP-based LLM risk monitor 
+- 🔐 [SentinelAI](https://github.com/Elloe-AI/sentinelai) – Real-time SHAP-based LLM risk monitor
+
+---
+
+## 🚀 Badges
+
+![License](https://img.shields.io/github/license/Elloe-AI/truthchecker)
+![Build](https://github.com/Elloe-AI/truthchecker/actions/workflows/tests.yml/badge.svg)
+[![Docs](https://img.shields.io/badge/docs-available-blue)](https://whitepapers.elloe.ai/truthchecker)
+[![PyPI](https://img.shields.io/pypi/v/truthchecker)](https://pypi.org/project/truthchecker/) 

@@ -5,11 +5,15 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "truthchecker"
 version = "0.1.0"
-description = "Hallucination and fact-checking module for LLMs with SHAP support"
-authors = [{name = "ImmuneGPT Team", email = "jambo@elloe.ai"}]
+description = "Hallucination detection engine for LLMs"
 readme = "README.md"
+requires-python = ">=3.9"
 license = {text = "Apache-2.0"}
-dependencies = ["shap", "numpy"]
+dependencies = ["shap", "numpy", "scikit-learn"]
+
+[project.urls]
+Homepage = "https://github.com/Elloe-AI/truthchecker"
+Documentation = "https://whitepapers.elloe.ai/truthchecker"
 
 [project.optional-dependencies]
 dev = [
