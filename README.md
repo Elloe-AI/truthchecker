@@ -1,3 +1,11 @@
+## 🚀 Badges
+![Build](https://github.com/Elloe-AI/truthchecker/actions/workflows/tests.yml/badge.svg)
+![License](https://img.shields.io/github/license/Elloe-AI/truthchecker)
+![Build](https://github.com/Elloe-AI/truthchecker/actions/workflows/tests.yml/badge.svg)
+[![Docs](https://img.shields.io/badge/docs-available-blue)](https://whitepapers.elloe.ai/truthchecker)
+[![PyPI version](https://img.shields.io/pypi/v/truthchecker)](https://pypi.org/project/truthchecker/)
+
+
 # 🧪 TruthChecker – Hallucination Detection for LLMs
 
 **Version 1.0 – Maintained by Elloe AI**  
@@ -121,10 +129,3 @@ By Elloe AI | Contact: [jambo@elloe.ai](mailto:jambo@elloe.ai)
 - 🔐 [SentinelAI](https://github.com/Elloe-AI/sentinelai) – Real-time SHAP-based LLM risk monitor
 
 ---
-
-## 🚀 Badges
-
-![License](https://img.shields.io/github/license/Elloe-AI/truthchecker)
-![Build](https://github.com/Elloe-AI/truthchecker/actions/workflows/tests.yml/badge.svg)
-[![Docs](https://img.shields.io/badge/docs-available-blue)](https://whitepapers.elloe.ai/truthchecker)
-[![PyPI](https://img.shields.io/pypi/v/truthchecker)](https://pypi.org/project/truthchecker/) 
