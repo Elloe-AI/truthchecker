@@ -1,0 +1,43 @@
+site_name: "Elloe AI: Immune Systems for Regulated LLMs"
+site_url: "https://whitepapers.elloe.ai"
+theme:
+  name: material
+  logo: assets/logo.png
+  favicon: assets/favicon.png
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: green
+    - scheme: slate
+      primary: indigo
+      accent: lime
+  features:
+    - navigation.tabs
+    - navigation.indexes
+    - toc.integrate
+    - content.code.copy
+repo_url: "https://github.com/Elloe-AI/truthchecker"
+repo_name: "Elloe-AI/truthchecker"
+nav:
+  - Home: index.md
+  - Whitepapers: whitepaper.md
+  - Open Source:
+    - TruthChecker: truthchecker.md
+    - AutoRAG: modules/auto_rag.md
+  - Products:
+    - SentinelAI: modules/sentinel_ai.md
+    - PatternMemory: modules/pattern_memory.md
+    - Compliance Dashboard: modules/dashboard.md
+  - Governance:
+    - HIPAA: compliance/hipaa.md
+    - GDPR: compliance/gdpr.md
+    - EU AI Act: compliance/eu_ai_act.md
+  - Contact: contact.md
+docs_dir: docs
+site_dir: site
+
+plugins:
+  - search
+  - pdf-export:
+      verbose: true
+      media_type: print 

@@ -1,0 +1,27 @@
+name: Export Whitepaper PDF
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build-pdf:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+      - name: Install dependencies
+        run: |
+          sudo apt update
+          sudo apt install -y libpango-1.0-0 libgdk-pixbuf2.0-0 libffi-dev libcairo2
+          pip install mkdocs mkdocs-material mkdocs-pdf-export-plugin
+      - name: Build docs and PDF
+        run: |
+          mkdocs build
+      - name: Upload generated site
+        uses: actions/upload-artifact@v3
+        with:
+          name: site
+          path: site/ 
