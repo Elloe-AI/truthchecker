@@ -1,0 +1,106 @@
+# 🧪 TruthChecker – Open Source Hallucination Detection for LLMs
+
+> **Lightweight, SHAP-enabled module for validating AI outputs in regulated environments.**
+
+---
+
+## 🔍 What is TruthChecker?
+
+**TruthChecker** is a Python module designed to detect hallucinations and unsupported claims in large language model (LLM) outputs using:
+
+* ✅ SHAP-based feature importance (model-agnostic)
+* ✅ Pattern-based claim validation
+* ✅ Domain-specific ground truth reference support
+
+Built originally as a component of the Immune System for AI platform, it's now available as an open-source module for developers, auditors, and research teams.
+
+---
+
+## ⚙️ Features
+
+* 🧠 Works with any Python-based LLM pipeline
+* 🔬 Supports SHAP integration for output explainability
+* 🔍 Validates claims using simple NLP rules or domain references
+* 🧪 Lightweight CLI and programmatic API
+* 📤 Designed for audit trails and compliance testing
+
+---
+
+## 🚀 Quickstart
+
+```bash
+pip install truthchecker
+```
+
+```python
+from truthchecker.validator import TruthChecker
+
+checker = TruthChecker()
+response = "COVID-19 is caused by bacteria."
+result = checker.validate(response)
+
+print(result)
+# {'verdict': 'false', 'reason': 'Factually incorrect – contradicts known reference'}
+```
+
+Or run via CLI:
+
+```bash
+truthchecker "LLMs always tell the truth."
+```
+
+---
+
+## 🧠 How it Works
+
+* **Text Classification**: Uses regex + embeddings to detect unverifiable or risky claims
+* **Explainability Layer**: SHAP visualizations for claim components
+* **Optional Ground Truth Integration**: Compare output to domain-specific JSON/CSV knowledge bases
+
+---
+
+## 📦 File Structure
+
+```
+truthchecker/
+├── validator.py         # Core validation logic
+├── cli.py              # CLI interface
+├── examples/
+│   └── check_example.py # Simple test
+├── tests/
+│   └── test_validator.py
+├── pyproject.toml
+├── LICENSE (Apache 2.0)
+└── README.md
+```
+
+---
+
+## 🧪 Run Tests
+
+```bash
+pytest tests/
+```
+
+---
+
+## 📄 License
+
+Apache 2.0 — open for reuse, forks, and community contribution.
+
+> This project is a public module spun out of [Immune System for AI](https://github.com/your-org/immune-system-ai), a compliance enforcement engine for regulated AI.
+
+---
+
+## 🤝 Contributing
+
+* Pull requests welcome
+* Add test cases for any new claim types
+* See `tests/test_validator.py` for patterns
+
+---
+
+## ✉️ Contact
+
+Created by the ImmuneGPT engineering team
+📫 Contact: [oss@yourdomain.com](mailto:oss@yourdomain.com) 

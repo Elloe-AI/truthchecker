@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "truthchecker"
+version = "0.1.0"
+description = "Hallucination and fact-checking module for LLMs with SHAP support"
+authors = [{name = "ImmuneGPT Team", email = "oss@yourdomain.com"}]
+readme = "README.md"
+license = {text = "Apache-2.0"}
+dependencies = ["shap", "numpy"]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"] 
