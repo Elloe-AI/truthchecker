@@ -1,32 +1,36 @@
-# 🧪 TruthChecker – Open Source Hallucination Detection for LLMs
+# 🧪 TruthChecker – Hallucination Detection for LLMs
 
-> **Lightweight, SHAP-enabled module for validating AI outputs in regulated environments.**
-
----
-
-## 🔍 What is TruthChecker?
-
-**TruthChecker** is a Python module designed to detect hallucinations and unsupported claims in large language model (LLM) outputs using:
-
-* ✅ SHAP-based feature importance (model-agnostic)
-* ✅ Pattern-based claim validation
-* ✅ Domain-specific ground truth reference support
-
-Built originally as a component of the Immune System for AI platform, it's now available as an open-source module for developers, auditors, and research teams.
+**Version 1.0 – Maintained by Elloe AI**  
+📄 [Read the Whitepaper](https://whitepapers.elloe.ai/whitepaper/)  
+🌐 [Docs Portal](https://whitepapers.elloe.ai) | 🧬 [Elloe AI](https://elloe.ai)
 
 ---
 
-## ⚙️ Features
+## ⚡ Overview
 
-* 🧠 Works with any Python-based LLM pipeline
-* 🔬 Supports SHAP integration for output explainability
-* 🔍 Validates claims using simple NLP rules or domain references
-* 🧪 Lightweight CLI and programmatic API
-* 📤 Designed for audit trails and compliance testing
+**TruthChecker** is a compliance-grade hallucination detection engine designed for auditing the outputs of large language models (LLMs) in high-stakes environments.
+
+Built by the creators of the [Immune System for AI](https://github.com/Elloe-AI/immune-system-ai), TruthChecker is used across:
+
+- Healthcare (HIPAA)
+- Financial services (GDPR, SOC2)
+- Legal tech (EU AI Act)
+- AI research & open source risk audits
 
 ---
 
-## 🚀 Quickstart
+## 🔎 Key Features
+
+✅ SHAP explainability & token-level attributions  
+✅ Pattern-based claim verification (e.g. absolutes, speculative language)  
+✅ Ground truth comparison via PubMed/ICD10/SEC JSON loaders  
+✅ Append-only audit logging (`.jsonl`)  
+✅ CLI, API, and YAML contract support  
+✅ Integrates with Obsidian, dashboards, or your CI pipeline
+
+---
+
+## 🚀 Quick Start
 
 ```bash
 pip install truthchecker
@@ -36,47 +40,35 @@ pip install truthchecker
 from truthchecker.validator import TruthChecker
 
 checker = TruthChecker()
-response = "COVID-19 is caused by bacteria."
-result = checker.validate(response)
-
+result = checker.validate("LLMs always tell the truth.")
 print(result)
-# {'verdict': 'false', 'reason': 'Factually incorrect – contradicts known reference'}
 ```
 
-Or run via CLI:
+**Output:**
+```json
+{
+  "verdict": "false",
+  "confidence": 0.50,
+  "reason": "Contains absolute claim ('always')"
+}
+```
 
+Or use via CLI:
 ```bash
-truthchecker "LLMs always tell the truth."
+truthchecker "AI models never hallucinate."
 ```
 
 ---
 
-## 🧠 How it Works
+## 📘 Docs & Research
 
-* **Text Classification**: Uses regex + embeddings to detect unverifiable or risky claims
-* **Explainability Layer**: SHAP visualizations for claim components
-* **Optional Ground Truth Integration**: Compare output to domain-specific JSON/CSV knowledge bases
-
----
-
-## 📦 File Structure
-
-```
-truthchecker/
-├── validator.py         # Core validation logic
-├── cli.py              # CLI interface
-├── examples/
-│   └── check_example.py # Simple test
-├── tests/
-│   └── test_validator.py
-├── pyproject.toml
-├── LICENSE (Apache 2.0)
-└── README.md
-```
+- 📄 [Whitepaper (PDF)](https://whitepapers.elloe.ai/whitepaper.pdf)
+- 📘 [Full Documentation](https://whitepapers.elloe.ai)
+- 📚 [Compliance Use Cases](https://whitepapers.elloe.ai/compliance)
 
 ---
 
-## 🧪 Run Tests
+## 🧪 Testing
 
 ```bash
 pytest tests/
@@ -84,23 +76,46 @@ pytest tests/
 
 ---
 
-## 📄 License
+## 📁 Project Structure
 
-Apache 2.0 — open for reuse, forks, and community contribution.
-
-> This project is a public module spun out of [Immune System for AI](https://github.com/your-org/immune-system-ai), a compliance enforcement engine for regulated AI.
+```
+truthchecker/
+├── validator.py         # Core logic
+├── cli.py               # CLI tool
+├── contracts/           # YAML validation contracts
+├── examples/
+│   └── check_example.py
+├── tests/
+│   └── test_validator.py
+├── docs/
+├── pyproject.toml
+├── README.md
+└── LICENSE (Apache 2.0)
+```
 
 ---
 
-## 🤝 Contributing
+## 📤 Contributing
 
-* Pull requests welcome
-* Add test cases for any new claim types
-* See `tests/test_validator.py` for patterns
+We welcome PRs for:
+
+- 🧠 New rule patterns (e.g. speculative language)
+- 📚 Domain loaders (clinical, legal, financial)
+- 🧪 SHAP visualizers or integrations
 
 ---
 
-## ✉️ Contact
+## 🔒 License
 
-Created by the ImmuneGPT engineering team
-📫 Contact: [jambo@elloe.ai](mailto:jambo@elloe.ai) 
+Apache 2.0 – Open source, secure by default.  
+By Elloe AI | Contact: [jambo@elloe.ai](mailto:jambo@elloe.ai)
+
+> "Verification is the immune system for LLMs. TruthChecker is your first line of defense."
+
+---
+
+## ✨ Related Projects
+
+- 🧬 [Immune System for AI](https://github.com/Elloe-AI/immune-system-ai) – Enterprise compliance engine for regulated LLMs
+- 🔍 [AutoRAG](https://github.com/Elloe-AI/autorag) – Retrieval-augmented reasoning with citation enforcement
+- 🔐 [SentinelAI](https://github.com/Elloe-AI/sentinelai) – Real-time SHAP-based LLM risk monitor 
