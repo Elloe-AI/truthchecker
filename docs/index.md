@@ -17,5 +17,6 @@ Built as part of the Immune System for AI platform, now a standalone open-source
 
 ## 🚀 Quickstart
 ```bash
+git pull origin main
 pip install truthchecker
 ``` 
