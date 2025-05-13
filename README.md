@@ -1,11 +1,3 @@
-## 🚀 Badges
-![Build](https://github.com/Elloe-AI/truthchecker/actions/workflows/tests.yml/badge.svg)
-![License](https://img.shields.io/github/license/Elloe-AI/truthchecker)
-![Build](https://github.com/Elloe-AI/truthchecker/actions/workflows/tests.yml/badge.svg)
-[![Docs](https://img.shields.io/badge/docs-available-blue)](https://whitepapers.elloe.ai/truthchecker)
-[![PyPI version](https://img.shields.io/pypi/v/truthchecker)](https://pypi.org/project/truthchecker/)
-
-
 # 🧪 TruthChecker – Hallucination Detection for LLMs
 
 **Version 1.0 – Maintained by Elloe AI**  
